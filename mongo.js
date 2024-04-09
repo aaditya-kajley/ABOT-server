@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcryptjs')
-mongoose.connect('mongodb://localhost:27017/loginPrac')
+mongoose.connect('mongodb+srv://Aaditya:Physics0*@cluster.ccgx6qz.mongodb.net/')
 .then(
     console.log("Connected")
 ).catch(
