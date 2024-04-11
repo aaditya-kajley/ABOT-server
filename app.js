@@ -12,12 +12,10 @@ dotenv.config()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-const corsOptions = {
-  origin: 'https://abot-client.vercel.app', // replace with your client's origin
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
-
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: '*',
+}
+));
 
 app.use(session({
     secret: 'Top level secret',
