@@ -81,10 +81,10 @@ app.post('/signup', async (req, res) => {
 
 
 app.post('/chatbot', async (req, res) => {
-    if (session.user == null) {
-        res.json("LogIn")
-    }
-    else {
+    // if (session.user == null) {
+    //     res.json("LogIn")
+    // }
+    // else {
         const { GoogleGenerativeAI } = require("@google/generative-ai");
         const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API);
         const input = req.body.text
@@ -99,7 +99,7 @@ app.post('/chatbot', async (req, res) => {
             res.json(text);
         }
         run();
-    }
+    // }
 })
 
 app.post('/imagegeneration', async (req, res) => {
