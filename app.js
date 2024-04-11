@@ -54,7 +54,7 @@ app.post('/login', async (req, res) => {
 
 app.post('/signup', async (req, res) => {
     const { name, email, password } = req.body
-
+    console.log("hello")
     console.log("rtg")
     try {
         const check = await collection.findOne({ email: email })
