@@ -13,7 +13,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.use(cors({
-  origin: '*',
+  origin: 'https://abot-client.vercel.app', // Update this with your frontend URL
+  credentials: true 
 }
 ));
 
