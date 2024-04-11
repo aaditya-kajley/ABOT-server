@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.use(cors({
-  origin: 'https://abot-client.vercel.app', // Update this with your frontend URL
+  origin: 'https://abot-client-83q7wo8f7-aaditya-kajleys-projects.vercel.app', // Update this with your frontend URL
   credentials: true 
 }
 ));
