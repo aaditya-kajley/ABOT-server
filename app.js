@@ -8,11 +8,13 @@ const session = require("express-session")
 const bcrypt = require('bcryptjs')
 const OpenAI = require('openai');
 
+app.use(cors());
+
 dotenv.config()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.use(cors());
+
 
 app.use(session({
     secret: 'Top level secret',
