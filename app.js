@@ -8,7 +8,13 @@ const session = require("express-session")
 const bcrypt = require('bcryptjs')
 const OpenAI = require('openai');
 
-app.use(cors());
+const corsOptions = {
+  origin: 'https://shiny-donut-b0a149.netlify.app',
+  methods: ['GET', 'POST'], // Add other allowed methods if needed
+  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
+app.options('*', cors(corsOptions));
 
 dotenv.config()
 app.use(express.json())
