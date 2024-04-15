@@ -12,11 +12,7 @@ dotenv.config()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.use(cors({
-  origin: 'https://shiny-donut-b0a149.netlify.app/', // Update this with your frontend URL
-  credentials: true 
-}
-));
+app.use(cors());
 
 app.use(session({
     secret: 'Top level secret',
